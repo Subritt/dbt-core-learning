@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: order_transaction
+    description: "A starter dbt model"
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          # - unique
+          - not_null
+      - name: order_date
+        description: "Order date of the transaction"
+        test:
+          - not_null
+      - name: amount
+        description: "Payment amount for an order"
+        test:
+          - integer
+      
