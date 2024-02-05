@@ -1,5 +1,5 @@
 /*
-raw_customers (created from seed) -> this model
+raw_orders (created from seed) -> this model
 */
 
 {{
@@ -10,4 +10,4 @@ raw_customers (created from seed) -> this model
 }}
 
 select *
-from dbt_database.scratch.raw_customers;
+from {{ source('jaffle_shop', 'raw_orders') }}

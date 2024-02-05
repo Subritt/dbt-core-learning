@@ -1,0 +1,8 @@
+sources:
+  - name: jaffle_shop
+    database: dbt_database
+    schema: scratch
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_payments

@@ -10,4 +10,4 @@ raw_payments (created from seed) -> this model
 }}
 
 select *
-from dbt_database.scratch.raw_orders;
+from {{ source('jaffle_shop', 'raw_payments') }}
